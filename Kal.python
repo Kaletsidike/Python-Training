@@ -1,0 +1,18 @@
+def evaluate_polynomial(x, polynomial):
+    # Define a dictionary to hold the value of x
+    values = {'x': x}
+    
+    # Use eval() to evaluate the polynomial expression
+    result = eval(polynomial, values)
+    
+    return result
+
+# Read inputs
+x, k = map(int, input().split())
+polynomial = input()
+
+# Evaluate the polynomial for the given x
+result = evaluate_polynomial(x, polynomial)
+
+# Check if the result equals k
+print(result == k)
